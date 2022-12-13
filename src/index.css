@@ -63,3 +63,33 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+#mobileLogo{
+  display:none;
+}
+@media only screen and (max-width: 500px) {
+      #navigationBar{
+        position: absolute !important;
+        bottom: 0 !important;
+        right: 0;
+        left: 0;
+      }
+      #logoImage{
+        display: none !important;
+      }
+      #navigationContainer{
+        padding: 1rem !important;
+        width: 100% !important;
+        justify-content: space-between !important;
+      }
+      #navigationContainer a{
+        font-size: clamp(1rem, 5vw, 5rem) !important;
+      }
+
+      #mobileLogo{
+        display:flex !important;
+        justify-content: center;
+      }
+      #mobileLogo{
+        
+      }
+}
