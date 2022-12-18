@@ -1,17 +1,17 @@
-*{
-  padding:0 !important;
-  margin:0 !important;
-}
+/* *{ */
+/* padding:0 !important;
+  margin:0 !important; */
+/* } */
 
 :root {
   /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
-  /* font-family: 'Roboto Condensed', sans-serif;
+  --Title-font: "Roboto Condensed", sans-serif;
 
-  font-family: 'Roboto Slab', serif; */
+  --normal-text: "Roboto Slab", serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  --yellow:#FBD800;
+  --yellow: #fbd800;
   color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,8 +19,10 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
-li{
+ul {
+  margin: 0 !important;
+}
+li {
   list-style: none;
 }
 a {
@@ -31,13 +33,27 @@ a {
 }
 a:hover {
   cursor: pointer;
-  color:var(--yellow);
+  color: var(--yellow);
 }
-
-body{
-  font-family: 'Roboto Condensed', sans-serif;
-  background-color: grey;
-  color:red;
+h1,
+h2,
+h4,
+h5,
+h6 {
+  font-family: var(--Title-font);
+  color: var(--yellow);
+}
+body {
+  font-family: var(--normal-text);
+  font-weight: 400;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+    url("https://images.pexels.com/photos/12031177/pexels-photo-12031177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-position: 0 20%;
+  background-size: cover;
+  color: black;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 h1 {
   font-size: 3.2em;
@@ -56,40 +72,75 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: s;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+.nav {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-bottom: .5px solid var(--yellow) !important;
+}
 
-#mobileLogo{
-  display:none;
+#mobileLogo {
+  display: none;
+}
+.card-text{
+  color: white !important;
+}
+.categoriesImg:hover{
+  transform: scale(1.05);
+  transition: transform .3s;
+}
+
+.footer{
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.1));
+  border-top: .5px solid var(--yellow) !important;
+}
+.footer ul{
+  border-bottom: none !important;
 }
 @media only screen and (max-width: 500px) {
-      #navigationBar{
-        position: absolute !important;
-        bottom: 0 !important;
-        right: 0;
-        left: 0;
-      }
-      #logoImage{
-        display: none !important;
-      }
-      #navigationContainer{
-        padding: 1rem !important;
-        width: 100% !important;
-        justify-content: space-between !important;
-      }
-      #navigationContainer a{
-        font-size: clamp(1rem, 5vw, 5rem) !important;
-      }
+  #navigationBar {
+    position: fixed !important;
+    bottom: 0 !important;
+    right: 0;
+    left: 0;
+    z-index: 2;
+  }
+  #logoImage {
+    display: none !important;
+  }
+  #navigationContainer {
+    padding: 0.5rem !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+  #navigationContainer a {
+    font-size: clamp(1rem, 5vw, 5rem) !important;
+  }
 
-      #mobileLogo{
-        display:flex !important;
-        justify-content: center;
-      }
-      #mobileLogo{
-        
-      }
+  #mobileLogo {
+    display: flex !important;
+    justify-content: center;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 0.5rem !important;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: 0.5px solid var(--yellow) !important;
+  }
+  .nav {
+    background-color: rgb(22, 20, 20);
+    border-bottom: none !important;
+  }
+  #heading{
+    font-size: clamp(1.8rem, 10vw, 2.5rem) !important;
+  }
+  .footer{
+      margin-block:clamp(3.8rem, 4vw, 4.1rem)!important;
+  }
+  body {
+    background-position: 59% 0;
+  }
 }

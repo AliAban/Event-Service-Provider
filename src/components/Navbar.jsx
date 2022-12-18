@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 
 export default class Navbar extends Component {
+  
   render() {
     return (
       <>
-        <div className="container-fluid bg-dark" id="mobileLogo">
-            <div style={{ width: "clamp(2rem, 30vw, 7.5rem)" }}>
+        <div className="container-fluid rounded-bottom" id="mobileLogo">
+            <div style={{ width: "clamp(2rem, 30vw, 6.5rem)" }}>
               <a>
                 <img
                   src="/logo(highResolution).png"
@@ -15,7 +16,7 @@ export default class Navbar extends Component {
               </a>
             </div>
         </div>
-        <nav className="bg-dark navbar-dark " id="navigationBar">
+        <nav className="nav navbar border-bottom" id="navigationBar">
           <div className="container-fluid d-flex px-5 justify-content-between">
             <div style={{ width: "clamp(2rem, 10vw, 7.5rem)" }} id="logoImage">
               <a>
