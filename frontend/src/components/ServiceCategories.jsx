@@ -1,7 +1,30 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMusic, faBook, faCarAlt, faBookReader, faBookAtlas, faBookJournalWhills, faCalendarAlt, faTable, faChair, faCakeCandles, faHeartCircleBolt, faEnvelope, faEnvelopeOpenText, faBowlFood, faPalette, faPlateWheat, faPastafarianism, faPizzaSlice } from "@fortawesome/free-solid-svg-icons";
-import { faBookmark, faBuilding, faHeart } from "@fortawesome/free-regular-svg-icons";
+import {
+  faMusic,
+  faBook,
+  faCarAlt,
+  faBookReader,
+  faBookAtlas,
+  faBookJournalWhills,
+  faCalendarAlt,
+  faTable,
+  faChair,
+  faCakeCandles,
+  faHeartCircleBolt,
+  faEnvelope,
+  faEnvelopeOpenText,
+  faBowlFood,
+  faPalette,
+  faPlateWheat,
+  faPastafarianism,
+  faPizzaSlice,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faBookmark,
+  faBuilding,
+  faHeart,
+} from "@fortawesome/free-regular-svg-icons";
 import { faPage4, faPagelines } from "@fortawesome/free-brands-svg-icons";
 
 const ServiceCategories = () => {
@@ -50,12 +73,12 @@ const ServiceCategories = () => {
     },
   ];
   return (
-    <main className="container py-2 text-center serviceCategories">
-      <h1 className="my-3" id="heading">
+    <main className="flex  justify-center flex-col px-5 dark:bg-slate-700 bg-white dark:text-white text-dark md:px-32 text-center marginTopAfterNav">
+      <h1 className="py-8 sm:py-10" id="heading">
         Services We Provide
       </h1>
 
-      <div className="category-container">
+      <div className="category-container dark:bg-slate-800">
         {serviceCategoriesArray.map((category) => {
           let style = {
             backgroundColor: category.backgroundColor,
@@ -74,7 +97,6 @@ const ServiceCategories = () => {
             </div>
           );
         })}
-        
       </div>
     </main>
   );

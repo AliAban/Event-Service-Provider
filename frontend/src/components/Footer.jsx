@@ -3,8 +3,8 @@ import React, { Component } from "react";
 const Footer = ()=>{
 
     return (
-      <footer className="footer pt-2">
-        <ul className=" d-flex justify-content-center border-bottom ">
+      <footer className="footer  py-5 text-black bg-white dark:text-white dark:bg-slate-800">
+        <ul className="flex justify-center border-b ">
           <li className="nav-item">
             <a href="#" className="nav-link px-2 text-muted">
               Home
@@ -21,7 +21,7 @@ const Footer = ()=>{
             </a>
           </li>
         </ul>
-        <p className="text-center text-muted">© 2022 Company, Inc</p>
+        <p className="text-center text-muted">© 2023 Company, Inc</p>
       </footer>
     );
   
